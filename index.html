@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>E-commerce product page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body class="container-xxl p-0">
+
+  <div id="bgHide"></div>
+  <!-- Header  Section start here-->
+  <header>
+    <!-- Div for Both sides the content -->
+    <div>
+      <div class="navBar" id="navBar" onclick="navToggle()">
+        <span></span>
+        <span></span>
+        <span></span>
+       </div>
+     <img src="./images/logo.svg" alt="Logo">
+     <nav>
+       <a href="#">Collections</a>
+       <a href="#">Men</a>
+       <a href="#">Women</a>
+       <a href="#">About</a>
+       <a href="#">Contact</a>
+     </nav>
+    </div>
+
+    <div>
+     <div class="cartImg">
+      <img src="./images/icon-cart.svg" alt="Cart icon" onclick="cartIcon()">
+      <h6 id="cartImgCount"></h6>
+     </div> 
+     <img src="./images/image-avatar.png" alt="Profile Image">
+    </div>
+   </header>
+
+   <div class="cart" id="cart">
+    <h4>Cart</h4>
+    <div id="cartcontainer" class="carthide">
+      <div class="cartItem">
+        <img src="./images/image-product-1-thumbnail.jpg" alt="img Thump">
+        <div>
+          <h5>Fall Limited Edition Sneakers</h5>
+          <h5> <span id="rateshow"></span><span id="totalAmount"></span></h5>
+          
+        </div>
+        <img src="./images/icon-delete.svg" alt="delete" onclick="removeCart()">
+      </div>
+      <button>checkout</button>
+    </div>
+    <div class="cartshow" id="emptyCart">
+      <h5>Your cart is Empty</h5>
+    </div>
+  </div>
+   <!-- Header End's Here -->
+
+   <!-- Main Content Start Here -->
+  <main>
+    <section>
+      <div class="img-main">
+        <img src="./images/image-product-1.jpg" alt="Product" id="img-main" onclick="imgshow()">
+      </div>
+      <div class="img-thumb">
+        <img src="./images/image-product-1-thumbnail.jpg" alt="Product View1" onclick="imgThumb(0)">
+        <img src="./images/image-product-2-thumbnail.jpg" alt="Product View2" onclick="imgThumb(1)">
+        <img src="./images/image-product-3-thumbnail.jpg" alt="Product View3" onclick="imgThumb(2)">
+        <img src="./images/image-product-4-thumbnail.jpg" alt="Product View4" onclick="imgThumb(3)">
+      </div>
+    </section>
+
+    <section id="imgcontainer" class="imgcon">
+      <img src="./images/icon-close.svg" alt="close" id="close" onclick="closeImg()">
+      <div class="img-main img-main2">
+        <img src="./images/icon-next.svg" alt="next Img" id="next" onclick="imgchange('next')">
+        <img src="./images/image-product-1.jpg" alt="Product" id="img-main2">
+        <img src="./images/icon-next.svg" alt="previous" id="previous" onclick="imgchange('pre')">
+      </div>
+      <div class="img-thumb img-thumb2">
+        <img src="./images/image-product-1-thumbnail.jpg" alt="Product View1" onclick="imgThumb2(0)">
+        <img src="./images/image-product-2-thumbnail.jpg" alt="Product View2" onclick="imgThumb2(1)">
+        <img src="./images/image-product-3-thumbnail.jpg" alt="Product View3" onclick="imgThumb2(2)">
+        <img src="./images/image-product-4-thumbnail.jpg" alt="Product View4" onclick="imgThumb2(3)">
+      </div>
+    </section>
+
+    <section>
+      <h1>Sneaker Company</h1>
+      <h2>Fall Limited Edition Sneakers</h2>
+      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      
+      <div class="rate">
+        <h3>$125.00 <span>50%</span></h3>
+        <h4><del>$250.00</del></h4>
+      </div>
+
+      <div class="btn-container">
+        <div class="productCount">
+          <img src="./images/icon-minus.svg" alt="minus" onclick="numberOfCartItem('less')">
+          <h4 id="count">0</h4>
+          <img src="./images/icon-plus.svg" alt="plus" onclick="numberOfCartItem('add')">
+        </div>
+
+        <div id="addbtn" onclick="addToCart()">
+            <img src="./images/icon-cart.svg" alt="cartBtn">
+            <h6>Add to cart</h6>
+        </div>
+      </div>
+
+    </section>
+  </main>
+<script src="./script.js"></script>
+</body>
+</html>
