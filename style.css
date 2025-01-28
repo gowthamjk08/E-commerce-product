@@ -229,7 +229,7 @@ main section:nth-child(2) .img-active{
     overflow: hidden;
     inset: 0;
     background-color:var(--Blackbackground);
-    z-index: 100;
+    z-index: 200;
 }
 .img-main2{
     position: relative;
